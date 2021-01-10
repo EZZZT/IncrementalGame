@@ -352,53 +352,8 @@ function unlockResearchBusinessTwo() {
 // Function to delete users save and reset data to default
 function reset() {
   localStorage.removeItem("save");
-  balance = 0;
-  document.getElementById("balance").innerHTML = 0;
-  shops = 0;
-  document.getElementById("shops").innerHTML = shops;
-  document.getElementById("shopCost").innerHTML = 15;
-  businesses = 0;
-  document.getElementById("businesses").innerHTML = businesses;
-  document.getElementById("businessCost").innerHTML = 250;
-  conglomerates = 0;
-  document.getElementById("conglomerates").innerHTML = conglomerates;
-  document.getElementById(
-    "conglomerateCost"
-  ).innerHTML = (3000).toLocaleString();
-  governments = 0;
-  document.getElementById("governments").innerHTML = governments;
-  document.getElementById(
-    "governmentCost"
-  ).innerHTML = (25000).toLocaleString();
-  resetModal.style.display = "none";
-  researchAnalyze = false;
-  researchClickOne = false;
-  researchShopOne = false;
-  researchShopTwo = false;
-  researchBusinessOne = false;
-  researchBusinessTwo = false;
-  shopDiv = true;
-  businessDiv = true;
-  conglomerateDiv = true;
-  governmentDiv = true;
-  middleColumnDiv = true;
-  researchAnalyzeDiv = true;
-  researchClickOneDiv = true;
-  researchShopOneDiv = true;
-  researchShopTwoDiv = true;
-  researchBusinessOneDiv = true;
-  researchBusinessTwoDiv = true;
-  document.getElementById("divshop").style.display = "none";
-  document.getElementById("divbusiness").style.display = "none";
-  document.getElementById("divconglomerate").style.display = "none";
-  document.getElementById("divgovernment").style.display = "none";
-  document.getElementById("middleColumn").style.display = "none";
-  document.getElementById("divResearchAnalyze").style.display = "none";
-  document.getElementById("divResearchClick1").style.display = "none";
-  document.getElementById("divResearchShop1").style.display = "none";
-  document.getElementById("divResearchShop2").style.display = "none";
-  document.getElementById("divResearchBusiness1").style.display = "none";
-  document.getElementById("divResearchBusiness2").style.display = "none";
+  
+  location.reload()
 }
 
 // Functions to manage reset button popup
