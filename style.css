@@ -1,4 +1,14 @@
 
+#leftColumn {
+  float: left;
+  width: 325px;
+}
+#middleColumn {
+  float: left;
+  width: 275px;
+  margin-left: 10px;
+}
+
 .resetModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
