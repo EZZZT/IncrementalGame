@@ -78,39 +78,39 @@ const showUnlockedAreas = () => {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.balance !== "undefined") {
     balance = savegame.balance;
-    document.getElementById('balance').innerHTML = balance;
+    document.getElementById('balance').innerHTML = balance.toLocaleString();
   }
   if (typeof savegame.shops !== "undefined") {
     shops = savegame.shops; 
-    document.getElementById('shops').innerHTML = shops;
+    document.getElementById('shops').innerHTML = shops.toLocaleString();
   }
   if (typeof savegame.nextCostShop !== "undefined") {
     nextCostShop = savegame.nextCostShop;
-    document.getElementById('shopCost').innerHTML = nextCostShop;
+    document.getElementById('shopCost').innerHTML = nextCostShop.toLocaleString();
   } 
   if (typeof savegame.businesses!== "undefined") {
     businesses = savegame.businesses;
-    document.getElementById('businesses').innerHTML = businesses;  
+    document.getElementById('businesses').innerHTML = businesses.toLocaleString();  
   }
   if (typeof savegame.nextCostBusiness !== "undefined") {
     nextCostBusiness = savegame.nextCostBusiness;
-    document.getElementById('businessCost').innerHTML = nextCostBusiness;
+    document.getElementById('businessCost').innerHTML = nextCostBusiness.toLocaleString();
   }  
   if (typeof savegame.conglomerates !== "undefined") {
     conglomerates = savegame.conglomerates;
-    document.getElementById('conglomerates').innerHTML = conglomerates;
+    document.getElementById('conglomerates').innerHTML = conglomerates.toLocaleString();
   }
   if (typeof savegame.nextCostConglomerate !== "undefined") {
     nextCostConglomerate = savegame.nextCostConglomerate;
-    document.getElementById('conglomerateCost').innerHTML = nextCostConglomerate;
+    document.getElementById('conglomerateCost').innerHTML = nextCostConglomerate.toLocaleString();
   }
   if (typeof savegame.governments !== "undefined") {
     governments = savegame.governments;
-    document.getElementById('governments').innerHTML = governments;  
+    document.getElementById('governments').innerHTML = governments.toLocaleString();  
   }
   if (typeof savegame.nextCostGovernment !== "undefined") {
     nextCostGovernment = savegame.nextCostGovernment;
-    document.getElementById('governmentCost').innerHTML = nextCostGovernment;  
+    document.getElementById('governmentCost').innerHTML = nextCostGovernment.toLocaleString();  
   }
   if (typeof savegame.shops == 'undefined' || savegame.shops == 0) {
     document.getElementById('shopCost').innerHTML = 10;
@@ -119,10 +119,10 @@ const showUnlockedAreas = () => {
     document.getElementById('businessCost').innerHTML = 100;
   }
   if (typeof savegame.conglomerates == 'undefined' || savegame.conglomerates == 0) {
-    document.getElementById('conglomerateCost').innerHTML = 1000;
+    document.getElementById('conglomerateCost').innerHTML = (1000).toLocaleString();
   }
   if (typeof savegame.governments == 'undefined' || savegame.governments == 0) {
-    document.getElementById('governmentCost').innerHTML = 10000;
+    document.getElementById('governmentCost').innerHTML = (10000).toLocaleString();
   }
   if (typeof savegame.researchOne !== 'undefined') {
    researchOne = savegame.researchOne
@@ -176,8 +176,8 @@ const showUnlockedAreas = () => {
 
 // Function for the work button
 const addBalance = number => {
-  balance = balance + number
-  document.getElementById('balance').innerHTML = balance;
+  balance = (balance + number)
+  document.getElementById('balance').innerHTML = balance.toLocaleString();
   /*function numberWithCommas(x) {
     return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -192,11 +192,11 @@ const buyShop = () => {
     if(balance >= shopCost){                                   //checks that the player can afford the worker
         shops = shops + 1;                                   //increases number of workers
     	balance = balance - shopCost;                          //removes the balance spent
-        document.getElementById('shops').innerHTML = shops;  //updates the number of workers for the user
-        document.getElementById('balance').innerHTML = balance;  //updates the balance for the user
+        document.getElementById('shops').innerHTML = shops.toLocaleString();  //updates the number of workers for the user
+        document.getElementById('balance').innerHTML = balance.toLocaleString();  //updates the balance for the user
     };
      nextCostShop = Math.floor(10 * Math.pow(1.2,shops));       //works out the cost of the next worker
-    document.getElementById('shopCost').innerHTML = nextCostShop;  //updates the worker cost for the user
+    document.getElementById('shopCost').innerHTML = nextCostShop.toLocaleString();  //updates the worker cost for the user
     
 };
 
@@ -206,11 +206,11 @@ const buyBusiness = () => {
     if(balance >= businessCost){                                  
         businesses = businesses + 1;                                  
     	balance = balance - businessCost;                          
-        document.getElementById('businesses').innerHTML = businesses;  
-        document.getElementById('balance').innerHTML = balance;  
+        document.getElementById('businesses').innerHTML = businesses.toLocaleString();  
+        document.getElementById('balance').innerHTML = balance.toLocaleString();  
     };
     nextCostBusiness = Math.floor(100 * Math.pow(1.2,businesses));       
-    document.getElementById('businessCost').innerHTML = nextCostBusiness;
+    document.getElementById('businessCost').innerHTML = nextCostBusiness.toLocaleString();
    
 };
 
@@ -220,11 +220,11 @@ const buyConglomerate = () => {
     if(balance >= conglomerateCost){                                  
         conglomerates = conglomerates + 1;                                  
     	balance = balance - conglomerateCost;                          
-        document.getElementById('conglomerates').innerHTML = conglomerates;  
-        document.getElementById('balance').innerHTML = balance;  
+        document.getElementById('conglomerates').innerHTML = conglomerates.toLocaleString();  
+        document.getElementById('balance').innerHTML = balance.toLocaleString();  
     };
     nextCostConglomerate = Math.floor(1000 * Math.pow(1.2,conglomerates));       
-    document.getElementById('conglomerateCost').innerHTML = nextCostConglomerate;
+    document.getElementById('conglomerateCost').innerHTML = nextCostConglomerate.toLocaleString();
     
 };
 
@@ -234,11 +234,11 @@ const buyGovernment = () => {
     if(balance >= governmentCost){                                  
         governments = governments + 1;                                  
     	balance = balance - governmentCost;                          
-        document.getElementById('governments').innerHTML = governments;  
-        document.getElementById('balance').innerHTML = balance;  
+        document.getElementById('governments').innerHTML = governments.toLocaleString();  
+        document.getElementById('balance').innerHTML = balance.toLocaleString();  
     };
     nextCostGovernment = Math.floor(10000 * Math.pow(1.2,governments));       
-    document.getElementById('governmentCost').innerHTML = nextCostGovernment;
+    document.getElementById('governmentCost').innerHTML = nextCostGovernment.toLocaleString();
     
 };
 
@@ -289,10 +289,10 @@ const reset = () => {
   document.getElementById('businessCost').innerHTML = 100
   conglomerates = 0
   document.getElementById('conglomerates').innerHTML = conglomerates; 
-  document.getElementById('conglomerateCost').innerHTML = 1000
+  document.getElementById('conglomerateCost').innerHTML = (1000).toLocaleString()
   governments = 0
   document.getElementById('governments').innerHTML = governments; 
-  document.getElementById('governmentCost').innerHTML = 10000
+  document.getElementById('governmentCost').innerHTML = (10000).toLocaleString()
   resetModal.style.display = "none";
   researchOne = false
   researchTwo = false
