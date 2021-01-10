@@ -18,47 +18,24 @@
   <script data-ad-client="ca-pub-8379557170069954" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
   <body onload='loadSave()'>
-    <div id='leftColumn'>
-      <p>
-       Funds $<span id='balance'>0</span>
-       </p>
-    
-      <p>
-        <button class='button1' onclick='addBalance(1)'>Work</button>
-        </p>
-
-      <div id='divshop' style="display: none"><p>
-        <button class='button1' onclick='buyShop(1)'>Buy Shop</button>
-        Shops: <span id="shops">0</span>
-        Cost: <span id="shopCost">10</span>
-        </p></div>
-
-      <div id='divbusiness' style="display: none"><p>
-        <button class='button1' onclick='buyBusiness(1)'>Buy Business</button>
-        Businesses: <span id="businesses">0</span>
-        Cost: <span id="businessCost">100</span>
-        </p></div>
-
-      <div id='divconglomerate' style="display: none"><p>
-        <button class='button1' onclick='buyConglomerate(1)'>Buy Conglomerate</button>
-        Conglomerates: <span id="conglomerates">0</span>
-        Cost: <span id="conglomerateCost">1000</span>
-        </p></div>
-
-      <div id='divgovernment' style="display: none"><p>
-        <button class='button1' onclick='buyGovernment(1)'>Buy Government</button>
-        Governments: <span id="governments">0</span>
-        Cost: <span id="governmentCost">10000</span>
-        </p></div>
-
-      <p>
-        <button class='button1' onclick='save()'>Save</button>
-        </p>
-
-      <p>
+    <div class='leftColumn'id='leftColumn'>
+      <p><h3><span class='underLine'>Funds:</span> $<span id='balance'>0</span></h3>
+      <button class='button1' onclick='addBalance(1)'>Work</button><br><br>
+      <div id='divshop' style="display: none">
+        <button class='button1' onclick='buyShop(1)'>Shops</button> <span id="shops">0</span> Cost: $<span id="shopCost">10</span>
+        </div><br>
+      <div id='divbusiness' style="display: none">
+        <button class='button1' onclick='buyBusiness(1)'>Businesses</button> <span id="businesses">0</span> Cost: $<span id="businessCost">100</span>
+        </div><br>
+      <div id='divconglomerate' style="display: none">
+        <button class='button1' onclick='buyConglomerate(1)'>Conglomerates</button> <span id="conglomerates">0</span> Cost: $<span id="conglomerateCost">1000</span>
+        </div><br>
+      <div id='divgovernment' style="display: none">
+        <button class='button1' onclick='buyGovernment(1)'>Governments</button> <span id="governments">0</span> Cost: $<span id="governmentCost">10000</span>
+        </div><br>
+        <button class='button1' onclick='save()'>Save</button><br><br>
         <button class='button1' id='resetButton'()'>Reset</button>
         </p>
-
       <div id="resetModal" class="resetModal">
       
       <div class="resetModalContent">
@@ -73,12 +50,12 @@
 
     </div>
     </div>
-    <div id='middleColumn' style="display: none">
-      <p>Research</p>
-      <div id='divresearch1' style="display: none"><p><button id='research1' class='button1' onclick='unlockResearchOne()'>Shops +25% Production</button><span id='research1cost'> Cost: 175</span></p></div>
-      <div id='divresearch2' style="display: none"><p><button id='research2' class='button1' onclick='unlockResearchTwo()'>Shops +100% Production</button><span id='research2cost'> Cost: 750</span></p></div>
-      <div id='divresearch3' style="display: none"><p><button id='research3' class='button1' onclick='unlockResearchThree()'>Businesses +25% Production</button><span id='research3cost'> Cost: 1000</span></p></div>
-      <div id='divresearch4' style="display: none"><p><button id='research4' class='button1' onclick='unlockResearchFour()'>Businesses +100% Production</button><span id='research4cost'> Cost: 4000</span></p></div>
+    <div id='middleColumn'class='middleColumn' style="display: none">
+      <p><h3><span class='underLine'>Research</span></h3><br>
+      <div id='divresearch1' style="display: none"><button id='research1' class='button1' onclick='unlockResearchOne()'>Shops +25% Production</button><span id='research1cost'> Cost: $175</span></div><br>
+      <div id='divresearch2' style="display: none"><button id='research2' class='button1' onclick='unlockResearchTwo()'>Shops +100% Production</button><span id='research2cost'> Cost: $750</span></div><br>
+      <div id='divresearch3' style="display: none"><button id='research3' class='button1' onclick='unlockResearchThree()'>Businesses +25% Production</button><span id='research3cost'> Cost: $1,000</span></div><br>
+      <div id='divresearch4' style="display: none"><button id='research4' class='button1' onclick='unlockResearchFour()'>Businesses +100% Production</button><span id='research4cost'> Cost: $4,000</span></p></div>
     </div>
   
    <script src="script.js"></script>
