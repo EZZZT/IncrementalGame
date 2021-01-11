@@ -280,7 +280,7 @@ function buyConglomerate() {
     ).innerHTML = conglomerates.toLocaleString();
     document.getElementById("balance").innerHTML = balance.toLocaleString();
   }
-  nextCostConglomerate = Math.floor(3000 * Math.pow(1.31, conglomerates));
+  nextCostConglomerate = Math.floor(3000 * Math.pow(1.18, conglomerates));
   document.getElementById(
     "conglomerateCost"
   ).innerHTML = nextCostConglomerate.toLocaleString();
@@ -297,7 +297,7 @@ function buyGovernment() {
     ).innerHTML = governments.toLocaleString();
     document.getElementById("balance").innerHTML = balance.toLocaleString();
   }
-  nextCostGovernment = Math.floor(25000 * Math.pow(1.29, governments));
+  nextCostGovernment = Math.floor(25000 * Math.pow(1.18, governments));
   document.getElementById(
     "governmentCost"
   ).innerHTML = nextCostGovernment.toLocaleString();
