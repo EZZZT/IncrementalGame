@@ -1,3 +1,9 @@
+.wrapper {
+  float: left;
+  width: 950px;
+}
+
+
 .leftColumn {
   float: left;
   width: 285px;

@@ -38,19 +38,19 @@ var cancel = document.getElementById("cancel");
 
 // The function for showing new unlocks
 function showUnlockedAreas() {
-  if (balance >= 15 && shopDiv === true) {
+  if (balance >= 15 && shopDiv === true || shops > 0) {
     document.getElementById("divshop").style.display = "block";
     shopDiv = false;
   }
-  if (balance >= 250 && businessDiv === true) {
+  if (balance >= 250 && businessDiv === true || businesses > 0) {
     document.getElementById("divbusiness").style.display = "block";
     businessDiv = false;
   }
-  if (balance >= 3000 && conglomerateDiv === true) {
+  if (balance >= 3000 && conglomerateDiv === true || conglomerates > 0) {
     document.getElementById("divconglomerate").style.display = "block";
     conglomerateDiv = false;
   }
-  if (balance >= 25000 && governmentDiv === true) {
+  if (balance >= 25000 && governmentDiv === true || governments > 0) {
     document.getElementById("divgovernment").style.display = "block";
     governmentDiv = false;
   }
