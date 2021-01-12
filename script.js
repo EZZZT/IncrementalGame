@@ -102,9 +102,6 @@ function loadSave() {
   researchBusinessOneDiv = true;
   researchBusinessTwoDiv = true;
   showUnlockedAreas();
-  if (shopDiv === false) {
-    document.getElementById("shopDiv").style.display = "block";
-  }
   if (typeof savegame.balance !== "undefined") {
     balance = savegame.balance;
     document.getElementById("balance").innerHTML = balance.toLocaleString();
@@ -307,8 +304,6 @@ function unlockResearchAnalyze() {
     balance = balance - 175;
     researchAnalyze = true;
     document.getElementById("divResearchAnalyze").style.display = "none";
-    document.getElementById("totalIncomeCalculator").innerHTML =
-      "Funds per second $" + totalIncome();
     document.getElementById("totalIncomeCalculator").style.display = "block";
   }
 }
@@ -407,7 +402,7 @@ function totalIncome() {
   var calcIncome =
     shopIncome() + businessIncome() + conglomerateIncome() + governmentIncome();
   document.getElementById("totalIncomeCalculator").innerHTML =
-    "Funds per second $" + calcIncome;
+    "Funds per second $" + calcIncome.toLocaleString();
   return calcIncome;
 }
 
