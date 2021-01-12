@@ -2,22 +2,24 @@
   float: left;
   width: 950px;
 }
-
-
+.topFunds {
+	margin-left: 13px;
+	margin-top: -1%;
+}
+.topFPS {
+	margin-top: -1%;
+}
 .leftColumn {
   float: left;
   width: 285px;
   line-height: 40%;
-  border: 1px solid black;
-  padding-left: 5px;
+  padding-left: 1px;
 }
 .middleColumn {
   float: left;
   width: 285px;
   line-height: 40%;
-  margin-left: 10px;
-  border: 1px solid black;
-  padding-left: 5px;
+  padding-left: 1px;
 }
 
 .underLine {
@@ -26,7 +28,7 @@
 }
 
 .paddingTop {
-  padding-top: 2px;
+  
 }
 
 .resetModal {
@@ -188,7 +190,9 @@
   text-decoration: none;
   vertical-align: middle;
   outline: none;
+
 }
+
 .button1:hover {
   border: 1px solid #898989;
   text-shadow: #d4d4d4 0 1px 0;
@@ -234,4 +238,42 @@
 .button1:disabled {
   opacity: 0.6;
   border: 1px solid #ffffff;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+	margin-left: 13px;
+	margin-top: -1%;
+	width: 459px;
+	
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
 }
