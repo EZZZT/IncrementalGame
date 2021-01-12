@@ -1,9 +1,6 @@
 "use strict";
 
-// ON LOAD RESEARCHES SHOW UP THAT SHOULD ALREADY BE SAVED AS UNLOCKED IN USERS SAVE FILE ON LOAD
-
 // Declares all global variables
-
 var balance = 0;
 var shops = 0;
 var shopCost = 15;
