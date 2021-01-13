@@ -21,16 +21,10 @@
   line-height: 40%;
   padding-left: 1px;
 }
-
 .underLine {
   border-bottom: 1px solid black;
   padding-bottom: 3px;
 }
-
-.paddingTop {
-  
-}
-
 .resetModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -43,7 +37,6 @@
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-
 .resetModalContent {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
@@ -53,7 +46,6 @@
   height: 65px;
   text-align: center;
 }
-
 .close {
   color: #aaa;
   float: right;
@@ -62,14 +54,11 @@
   margin-top: -8%; /* for relative positioning */
   margin-right: -5%;
 }
-
-.close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
 .resetModalButtons {
   margin-top: -6%;
   height: 10%;
@@ -129,7 +118,6 @@
 
   color: #000000;
 }
-
 .resetModalButtons:active {
   text-shadow: #bfbfbf 0 1px 0;
   border: 1px solid #2e2e2e;
@@ -150,12 +138,10 @@
 
   color: #444444;
 }
-
 .resetModalButtons:disabled {
   opacity: 0.6;
   border: 1px solid #ffffff;
 }
-
 .button1 {
   border: 1px solid #1a1a1a;
   background: #666666;
@@ -192,12 +178,10 @@
   outline: none;
 
 }
-
 .button1:hover {
   border: 1px solid #898989;
   text-shadow: #d4d4d4 0 1px 0;
   background: #616161;
-
   background: -webkit-gradient(
     linear,
     left top,
@@ -213,7 +197,6 @@
 
   color: #000000;
 }
-
 .button1:active {
   text-shadow: #bfbfbf 0 1px 0;
   border: 1px solid #2e2e2e;
@@ -234,12 +217,10 @@
 
   color: #444444;
 }
-
 .button1:disabled {
   opacity: 0.6;
   border: 1px solid #ffffff;
 }
-
 .tab {
   overflow: hidden;
   background-color: #f1f1f1;
@@ -248,7 +229,6 @@
 	width: 459px;
 	
 }
-
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
@@ -260,17 +240,14 @@
   transition: 0.3s;
   font-size: 17px;
 }
-
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 }
-
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
-
 /* Style the tab content */
 .tabcontent {
   display: none;

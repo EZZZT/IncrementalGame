@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -24,6 +23,7 @@
         <p>
         <h2><span class='underLine'>Funds:</span> $<span id='balance'>0</span></h2>
         <h4><span class='topFPS' id='totalIncomeCalculator' style='display: none'></span></h4>
+				</p>
     </div>
     <div class='wrapper'>
         <div class="tab">
@@ -35,18 +35,16 @@
         <div class='tabcontent' id='Production'>
             <div class='leftColumn' id='leftColumn'>
                 <button class='button1' onclick='workIncome()'>Work</button><br><br>
-                <div id='divshop' style="display: none"><button class='button1' onclick='buyShop(1)'>Shops</button>
-                    <span id="shops">0</span> Cost: $<span id="shopCost">15</span></div><br>
+                <div id='divshop' style="display: none"><button class='button1' onclick='buyShop(1)'>Shops</button> 
+								<span id="shops">0</span> Cost: $<span id="shopCost">15</span></div><br>
                 <div id='divbusiness' style="display: none"><button class='button1'
-                        onclick='buyBusiness(1)'>Businesses</button> <span id="businesses">0</span> Cost: $<span
-                        id="businessCost">250</span></div><br>
+                onclick='buyBusiness(1)'>Businesses</button> <span id="businesses">0</span> Cost: $<span
+                id="businessCost">250</span></div><br>
                 <div id='divconglomerate' style="display: none"><button class='button1'
-                        onclick='buyConglomerate(1)'>Conglomerates</button> <span id="conglomerates">0</span> Cost:
-                    $<span id="conglomerateCost">3000</span></div><br>
+                onclick='buyConglomerate(1)'>Conglomerates</button> <span id="conglomerates">0</span> Cost: $<span id="conglomerateCost">3000</span></div><br>
                 <div id='divgovernment' style="display: none"><button class='button1'
-                        onclick='buyGovernment(1)'>Governments</button> <span id="governments">0</span> Cost: $<span
-                        id="governmentCost">25000</span></div><br>
-               </p>
+                onclick='buyGovernment(1)'>Governments</button> <span id="governments">0</span> Cost: $<span
+                id="governmentCost">25000</span></div><br>
             </div>
         </div>
         <div class='tabcontent' id='Research'>

@@ -45,7 +45,6 @@ var resetModal = document.getElementById("resetModal");
 var resetButton = document.getElementById("resetButton");
 var resetClose = document.getElementsByClassName("close")[0];
 var cancel = document.getElementById("cancel");
-
 // Tab function
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -60,7 +59,6 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
 // The function for showing new unlocks
 function showUnlockedAreas() {
     if (balance >= 15 && shopDiv === true || shops > 0) {
@@ -128,7 +126,6 @@ function showUnlockedAreas() {
         researchTotalOneDiv = false;
     }
 }
-
 // This loads users local storage save
 function loadSave() {
     var savegame = JSON.parse(localStorage.getItem("save"));
@@ -310,14 +307,12 @@ function loadSave() {
     showUnlockedAreas();
 		openTab(event, 'Production')
 }
-
 // Function for the work button
 function addBalance(number) {
     balance = balance + number;
     document.getElementById("balance").innerHTML = balance.toLocaleString();
     showUnlockedAreas();
 }
-
 // Function to buy shops
 function buyShop() {
     shopCost = Math.floor(15 * Math.pow(1.18, shops)); //works out the cost of this worker
@@ -331,7 +326,6 @@ function buyShop() {
     nextCostShop = Math.floor(15 * Math.pow(1.18, shops)); //works out the cost of the next worker
     document.getElementById("shopCost").innerHTML = nextCostShop.toLocaleString(); //updates the worker cost for the user
 }
-
 // Function to buy businesses
 function buyBusiness() {
     businessCost = Math.floor(250 * Math.pow(1.18, businesses));
@@ -348,7 +342,6 @@ function buyBusiness() {
         "businessCost"
     ).innerHTML = nextCostBusiness.toLocaleString();
 }
-
 // Function to buy conglomerates
 function buyConglomerate() {
     conglomerateCost = Math.floor(3000 * Math.pow(1.18, conglomerates));
@@ -365,7 +358,6 @@ function buyConglomerate() {
         "conglomerateCost"
     ).innerHTML = nextCostConglomerate.toLocaleString();
 }
-
 // Function to buy governments
 function buyGovernment() {
     governmentCost = Math.floor(25000 * Math.pow(1.18, governments));
@@ -467,7 +459,6 @@ function reset() {
 
     location.reload()
 }
-
 // Functions to manage reset button popup
 resetButton.onclick = function () {
     resetModal.style.display = "block";
@@ -478,7 +469,6 @@ resetClose.onclick = function () {
 cancel.onclick = function () {
     resetModal.style.display = "none";
 };
-
 // Functions to calculate income
 function workIncome() {
     var workCalc = 1;
@@ -537,7 +527,6 @@ function totalIncome() {
         "Funds per second $" + calcIncome.toLocaleString();
     return calcIncome;
 }
-
 // Function to save game data locally to an object
 function save() {
     var saveTime = new Date();
@@ -567,7 +556,6 @@ function save() {
     };
     localStorage.setItem("save", JSON.stringify(saveObject));
 }
-
 // Function to add balance every 1000ms(1 second)
 window.setInterval(function () {
     addBalance(totalIncome());
